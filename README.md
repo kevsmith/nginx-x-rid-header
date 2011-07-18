@@ -9,6 +9,7 @@ CREDITS
 ======
 
 Brian Long  (<mailto:newobj@gmail.com>, <mailto:brian@dotspots.com>, <http://newobj.net>)
+
 Kevin Smith (<mailto:k@opscode.com>, <http://www.opscode.com>)
 
 USAGE
