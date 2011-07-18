@@ -15,11 +15,11 @@ Kevin Smith (<mailto:k@opscode.com>, <http://www.opscode.com>)
 USAGE
 =====
 
-1) Add `--add-module=../git/nginx-x-rid-header` to your nginx configure command. On Linux, you should also add `--with-ld-opt=-lossp-uuid` or whatever flavor of uuid-devel comes with your distribution. Now `make` and `make install`.
+1) Add `--add-module=../git/nginx-x-rid-header` to your nginx configure command. On Linux and other platforms which do not bundle e2fsprogs, you should also add `--with-ld-opt=-luuid` to the configure command.
 
 2) You now have access to a `$request_id` variable. Suggested use:
 
-    log_format main  '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$http_x_forwarded_for" - $connection $request_time $upstream_cache_status $request_id';
+    log_format main  '$remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$http_x_forwarded_for" - $connection $request_time $upstream_cache_status rid:$request_id';
     server {
         listen       80;
         server_name  example.com;
