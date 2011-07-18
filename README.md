@@ -3,12 +3,13 @@ OVERVIEW
 
 nginx-x-rid-header is a small module which adds a request-scoped id (uuid) variable that can be used to correlate frontend logging/activity with backend logging/activity.
 
-Currently only supports NGX_LINUX and NGX_DARWIN.
+Supports platforms w/e2fsprogs & libuuid.
 
 CREDITS
 ======
 
-Brian Long (<mailto:newobj@gmail.com>, <mailto:brian@dotspots.com>, <http://newobj.net>)
+Brian Long  (<mailto:newobj@gmail.com>, <mailto:brian@dotspots.com>, <http://newobj.net>)
+Kevin Smith (<mailto:k@opscode.com>, <http://www.opscode.com>)
 
 USAGE
 =====
