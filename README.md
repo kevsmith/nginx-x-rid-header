@@ -16,6 +16,7 @@ USAGE
 =====
 
 1) Add `--add-module=../git/nginx-x-rid-header` to your nginx configure command. On Linux and other platforms which do not bundle e2fsprogs, you should also add `--with-ld-opt=-luuid` to the configure command.
+ a) On Open{Indiana|Solaris},, install e2fsprogs from SFE (http://staticdev.uk.openindiana.org:10002).  It is installed a bit deeper in the hierarchy, so build with "C_INCLUDE_PATH=/usr/include/ext2fs/ LD_LIBRARY_PATH=/usr/lib/ext2fs make" to get the right path.
 
 2) You now have access to a `$request_id` variable. Suggested use:
 
